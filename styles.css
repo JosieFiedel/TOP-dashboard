@@ -178,7 +178,7 @@
 .right-bottom-header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: right;
+    align-items: center;
     padding-right: var(--header-padding);
     gap: 2rem;
 }
