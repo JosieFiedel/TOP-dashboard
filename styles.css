@@ -2,7 +2,7 @@
 
 :root {
     --sidebar-padding: 1.5rem;
-    --header-padding: 2rem;
+    --header-padding: 4rem;
     --color-pink: #be185d;
     --color-white: #ffffff;
     --color-light-grey: #ecebebf0;
@@ -76,12 +76,12 @@
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    padding: 0 0 var(--header-padding) var(--header-padding);
+    padding: 0 0 2rem var(--header-padding);
 }
 
 .top-header {
     display: grid;
-    grid-template-columns: 6fr 3fr;
+    grid-template-columns: 7fr 3fr;
 }
 
 .search-header img {
@@ -105,7 +105,7 @@
 
 .searchbar {
     padding-left: 0.6rem;
-    width: 75%;
+    width: 90%;
     background-color: var(--color-light-grey);
     border-radius: 1rem;
     border: 2px solid var(--color-pink);
@@ -122,8 +122,10 @@
     outline: none;
 }
 
-.right-top-header button img {
+.right-top-header button {
     width: 2rem;
+    justify-self: right;
+    margin-right: 1.5rem;
 }
 
 .right-top-header .icon {
@@ -134,22 +136,23 @@
 
 .right-top-header {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 5fr;
-    gap: 1rem;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    text-align: left;
     font-size: 1.3rem;
     font-weight: bold;
+    gap: 1rem;
+    padding-right: var(--header-padding);
 }
 
 .bottom-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 2fr;
 }
 
 .left-bottom-header {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -175,8 +178,9 @@
 .right-bottom-header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: right;
+    padding-right: var(--header-padding);
     gap: 2rem;
-    padding: 1.7rem 8rem;
 }
 
 .header-btn {
@@ -186,7 +190,10 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 25px;
+    justify-self: right;
+    width: 9rem;
+    height: 3rem;
 }
 
 .content {
