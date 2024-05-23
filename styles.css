@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --sidebar-padding: 1.5rem;
     --header-padding: 4rem;
+    --title-padding: 1rem;
     --projects-margin: 2rem;
     --color-pink: #be185d;
     --color-yellow: #f6d76f;    
@@ -18,7 +24,6 @@
     grid-template: 1fr 4fr / 1fr 5fr;
     min-height: 100vh;
     font-family: "Roboto";
-    border: 2px solid var(--color-pink);
 }
 
 /* Sidebar */
@@ -27,7 +32,9 @@
     grid-row: 1 / -1;
     background-color: var(--color-pink);
     display: grid;
-    grid-template-rows: 1fr 2.4fr 2fr 3fr;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .sidebar img {
@@ -42,7 +49,7 @@
 .sidebar a {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
     color: var(--color-white);
 }
 
@@ -214,6 +221,10 @@
     grid-template-columns: 3fr 1fr;
 }
 
+h2 {
+    padding: var(--title-padding) 0;
+}
+
 /* Projects */
 
 .projects {
@@ -225,7 +236,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
-    height: calc(100% - 4.2rem);
+    height: calc(100% - 4rem);
 }
 
 .project-cards .card {
@@ -269,6 +280,7 @@
     grid-auto-flow: column;
     justify-content: end;
     align-self: end;
+    gap: 1rem;
 }
 
 .card-buttons button {
@@ -314,7 +326,7 @@
 /* Trending */
 
 .trending {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .profile-cards {
