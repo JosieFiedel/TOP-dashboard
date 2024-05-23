@@ -225,39 +225,50 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
+    height: calc(100% - 4.2rem);
 }
 
 .project-cards .card {
+    display: grid;
     background-color: var(--color-white);
     border-radius: 10px;
     border-left: 8px solid var(--color-yellow);
     box-shadow: 0 5px 5px var(--color-shadow);
+    padding-bottom: 1rem;
 }
 
 .project-cards .card-text,
 .project-cards .card-buttons {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
-.card-text > h3,
 .card-text > p {
     margin: 0;
 }
 
-.card-text {
-    display: grid;
-    gap: 1rem;
-    margin-top: 1rem;
+.card-text > p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.card-text > p {
+.card-text {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-top: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-text > p:last-child {
     color: var(--color-dark-grey);
+    align-self: self-start;
 }
 
 .card-buttons {
     display: grid;
     grid-auto-flow: column;
     justify-content: end;
+    align-self: end;
 }
 
 .card-buttons button {
